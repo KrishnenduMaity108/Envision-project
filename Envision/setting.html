@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #1a1a1a;
+            color: white;
+        }
+
+        .sidebar {
+            height: 100vh;
+            width: 15%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 20px;
+        }
+
+        .sidebar a {
+            padding: 15px 0;
+            text-decoration: none;
+            color: white;
+            text-align: center;
+            width: 100%;
+            transition: background 0.3s;
+        }
+
+        .sidebar a:hover {
+            background-color: #575757;
+        }
+
+        .sidebar a i {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 24px;
+        }
+
+        .content {
+            margin-left: 15%;
+            padding: 20px;
+        }
+
+        .header {
+          background: linear-gradient(to right, #1f4562,#500e39);
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .header h1 {
+            margin: 0;
+        }
+
+        .settings-container {
+            background-color: #2b2b2b;
+            padding: 20px;
+            border-radius: 10px;
+            width: 80%;
+            max-width: 600px;
+            margin: 20px auto;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .settings-container h2 {
+            margin-bottom: 20px;
+            color: #c12291;
+        }
+
+        .settings-container label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+
+        .settings-container input, .settings-container select {
+            width: 95%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            border: none;
+            outline: none;
+        }
+
+        .settings-container select{
+          width: 98%;
+        }
+
+        .btn-container{
+          display: flex;
+          justify-content: end;
+        }
+
+        .settings-container button {
+            background-color: #c13497;
+            border: none;
+            padding: 10px 20px;
+            margin-left: auto;
+            border-radius: 5px;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .settings-container button:hover {
+            background-color: #b91d73;
+        }
+
+        @media (max-width: 768px) {
+            .sidebar {
+                width: 100%;
+                height: auto;
+                position: relative;
+                flex-direction: row;
+                justify-content: space-around;
+                padding: 10px 0;
+            }
+
+            .content {
+                margin-left: 0;
+                padding: 10px;
+            }
+
+            .header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .settings-container {
+                width: 90%;
+            }
+         }
+
+         
+         @media (max-width: 480px) {
+          .sidebar a {
+            font-size: 13px;
+          }
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <a href="profile.html"><i class="fas fa-user"></i>PROFILE</a>
+        <a href="home3.html"><i class="fas fa-book"></i>COURSES</a>
+        <a href="./message.html"><i class="fas fa-envelope"></i>MESSAGES</a>
+        <a href="setting.html"><i class="fas fa-cog"></i>SETTINGS</a>
+        <a href="logout.html"><i class="fas fa-sign-out-alt"></i>LOG OUT</a>
+    </div>
+    <div class="content">
+        <div class="header">
+            <h1>SETTINGS</h1>
+        </div>
+        <div class="settings-container">
+            <h2>Account Settings</h2>
+            <form>
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" value="JohnDoe">
+                
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" value="john.doe@example.com">
+                
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter new password">
+                
+                <label for="notifications">Notification Preferences</label>
+                <select id="notifications" name="notifications">
+                    <option value="all">All Notifications</option>
+                    <option value="email">Email Only</option>
+                    <option value="none">No Notifications</option>
+                </select>
+                
+                <div class="btn-container">
+                  <button type="submit">Save Changes</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

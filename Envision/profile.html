@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #1a1a1a;
+            color: white;
+        }
+
+        .sidebar {
+            height: 100vh;
+            width: 15%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 20px;
+        }
+
+        .sidebar a {
+            padding: 15px 0;
+            text-decoration: none;
+            color: white;
+            text-align: center;
+            width: 100%;
+            transition: background 0.3s;
+        }
+
+        .sidebar a:hover {
+            background-color: #575757;
+        }
+
+        .sidebar a i {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 24px;
+        }
+
+        .content {
+            margin-left: 15%;
+            padding: 20px;
+        }
+
+        .header {
+          background: linear-gradient(to right, #1f4562,#500e39);
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .header h1 {
+            margin: 0;
+        }
+
+        .profile-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .profile-card {
+            background-color: #2b2b2b;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            width: 80%;
+            max-width: 600px;
+            margin-top: 20px;
+        }
+
+        .profile-card img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
+
+        .profile-card h2 {
+            margin: 0;
+        }
+
+        .profile-card p {
+            margin: 10px 0;
+        }
+
+        .profile-card .info {
+            margin-top: 20px;
+            text-align: left;
+        }
+
+        .profile-card .info h3 {
+            margin-top: 20px;
+            color: #c12291;
+        }
+
+        .profile-card .info ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .profile-card .info ul li {
+            margin-bottom: 10px;
+        }
+
+        .profile-card .info ul li a {
+            color: #674ad1;
+            text-decoration: none;
+        }
+
+        .profile-card .info ul li a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .sidebar {
+                width: 100%;
+                height: auto;
+                position: relative;
+                flex-direction: row;
+                justify-content: space-around;
+                padding: 10px 0;
+            }
+
+            .content {
+                margin-left: 0;
+                padding: 10px;
+            }
+
+            .header {
+                flex-direction: column;
+                text-align: center;
+            }
+        } 
+
+        @media (max-width: 480px) {
+          .sidebar a {
+            font-size: 13px;
+          }
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <a href="profile.html"><i class="fas fa-user"></i>PROFILE</a>
+        <a href="home3.html"><i class="fas fa-book"></i>COURSES</a>
+        <a href="./message.html"><i class="fas fa-envelope"></i>MESSAGES</a>
+        <a href="setting.html"><i class="fas fa-cog"></i>SETTINGS</a>
+        <a href="logout.html"><i class="fas fa-sign-out-alt"></i>LOG OUT</a>
+    </div>
+    <div class="content">
+        <div class="header">
+            <h1>PROFILE</h1>
+        </div>
+        <div class="profile-container">
+            <div class="profile-card">
+                <img src="./images/profile-pic.jpg" alt="Profile Picture">
+                <h2>John Doe</h2>
+                <p>Software Engineer</p>
+                <div class="info">
+                    <h3>About</h3>
+                    <p>A brief bio about John Doe. This section can contain information about the user, their interests, background, etc.</p>
+                    
+                    <h3>Skills</h3>
+                    <ul>
+                        <li>JavaScript</li>
+                        <li>Python</li>
+                        <li>Java</li>
+                        <li>C++</li>
+                        <li>HTML & CSS</li>
+                    </ul>
+                    
+                    <h3>Education</h3>
+                    <p>B.Tech in Computer Science, XYZ University</p>
+                    
+                    <h3>Contact</h3>
+                    <ul>
+                        <li>Phone: (123) 456-7890</li>
+                        <li>Email: john.doe@example.com</li>
+                        <li>Website: <a href="http://www.johndoe.com" target="_blank">www.johndoe.com</a></li>
+                    </ul>
+                    
+                    <h3>Coding Platforms</h3>
+                    <ul>
+                        <li><a href="https://www.geeksforgeeks.org" target="_blank">GeeksforGeeks</a></li>
+                        <li><a href="https://www.codingninjas.com" target="_blank">Coding Ninjas</a></li>
+                    </ul>
+                    
+                    <h3>LinkedIn</h3>
+                    <ul>
+                        <li><a href="https://www.linkedin.com/in/johndoe" target="_blank">LinkedIn Profile</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

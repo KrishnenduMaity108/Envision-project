@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #1a1a1a;
+            color: white;
+        }
+
+        .sidebar {
+            height: 100vh;
+            width: 15%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 20px;
+        }
+
+        .sidebar a {
+            padding: 15px 0;
+            text-decoration: none;
+            color: white;
+            text-align: center;
+            width: 100%;
+            transition: background 0.3s;
+        }
+
+        .sidebar a:hover {
+            background-color: #575757;
+        }
+
+        .sidebar a i {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 24px;
+        }
+
+        .content {
+            margin-left: 15%;
+            padding: 20px;
+        }
+
+        .header {
+            background: linear-gradient(to right, #1f4562,#500e39);
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header h1 {
+            margin: 0;
+        }
+
+        .search-bar {
+            background-color: white;
+            border: none;
+            outline: rgb(115, 115, 115);
+            padding: 10px;
+            border-radius: 20px;
+            width: 200px;
+        }
+
+        .courses {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .course-card {
+            background-color: #2b2b2b;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            cursor: pointer;
+            transition: transform 0.3s, background 0.3s;
+            text-decoration: none; 
+            color: white; 
+        }
+
+        .course-card:hover {
+            transform: translateY(-10px);
+            background-color: #444;
+        }
+
+        .course-card .img-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 150px; 
+        }
+
+        .course-card img {
+            max-width: 100%;
+            max-height: 100%;
+            border-radius: 10px;
+        }
+
+        .course-card h3 {
+            margin: 10px 0 0 0;
+        }
+
+        .continue-button {
+            background-color: #083a60;
+            color: white;
+            font-weight: bold;
+            padding: 20px 30px;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            display: flex;
+            align-items: center; 
+            justify-content: center; 
+            gap: 10px; 
+            margin: 40px auto 0; 
+            transition: background 0.3s;
+            text-align: center;
+            text-decoration: none; 
+            max-width: 300px;
+        }
+
+        .continue-button:hover {
+            background-color: #810c58;
+        }
+
+        @media (max-width: 768px) {
+            .sidebar {
+                width: 100%;
+                height: auto;
+                position: relative;
+                flex-direction: row;
+                justify-content: space-around;
+                padding: 10px 0;
+            }
+
+            .content {
+                margin-left: 0;
+                padding: 10px;
+            }
+
+            .header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .search-bar {
+                width: 100%;
+                margin-top: 10px;
+            }
+
+            .courses {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .sidebar a {
+                font-size: 13px;
+            }
+        }
+
+        @media (min-width: 769px) and (max-width: 1024px) {
+            .courses {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <a href="profile.html"><i class="fas fa-user"></i>PROFILE</a>
+        <a href="home3.html"><i class="fas fa-book"></i>COURSES</a>
+        <a href="./message.html"><i class="fas fa-envelope"></i>MESSAGES</a>
+        <a href="setting.html"><i class="fas fa-cog"></i>SETTINGS</a>
+        <a href="logout.html"><i class="fas fa-sign-out-alt"></i>LOG OUT</a>
+    </div>
+    <div class="content">
+        <div class="header">
+            <h1>COURSES</h1>
+            <input type="text" class="search-bar" placeholder="Search">
+        </div>
+        <div class="courses">
+            <a href="c-programming.html" class="course-card">
+                <div class="img-container">
+                    <img src="./images/c.jpeg" alt="C Programming">
+                </div>
+                <h3>C PROGRAMMING</h3>
+            </a>
+            <a href="java.html" class="course-card">
+                <div class="img-container">
+                    <img src="./images/java.jpeg" alt="Java">
+                </div>
+                <h3>JAVA</h3>
+            </a>
+            <a href="cpp.html" class="course-card">
+                <div class="img-container">
+                    <img src="./images/c++.png" alt="C++">
+                </div>
+                <h3>C++</h3>
+            </a>
+            <a href="python.html" class="course-card">
+                <div class="img-container">
+                    <img src="./images/Python.png" alt="Python">
+                </div>
+                <h3>PYTHON</h3>
+            </a>
+            <a href="javascript.html" class="course-card">
+                <div class="img-container">
+                    <img src="./images/js-icon.png" alt="JavaScript">
+                </div>
+                <h3>JAVASCRIPT</h3>
+            </a>
+            <a href="css.html" class="course-card">
+                <div class="img-container">
+                    <img src="./images/css-icon.png" alt="CSS">
+                </div>
+                <h3>CSS</h3>
+            </a>
+        </div>
+        <a href="./thirdpage.html" class="continue-button">
+            Continue Your Journey
+            <i class="fas fa-arrow-right"></i>
+        </a>
+    </div>
+</body>
+</html>
